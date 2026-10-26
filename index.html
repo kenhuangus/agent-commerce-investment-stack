@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Agent Commerce Investment Stack · Ken Huang, CISSP</title>
+  <meta name="description" content="A seven-layer framework for where value, risk, and opportunity concentrate as autonomous agents transact on behalf of consumers. By Ken Huang, CISSP.">
+  <meta name="author" content="Ken Huang, CISSP">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Kalam:wght@400;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/deck.css">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar__brand"><span class="bar__logo">◆</span><span>AGENT COMMERCE STACK</span></div>
+  <div class="bar__title" id="slideTitle">The Agent Commerce Investment Stack</div>
+  <div class="bar__actions">
+    <button class="bar__btn" id="fsBtn" aria-label="Enter fullscreen (F)" title="Toggle fullscreen (F)">
+      <span class="bar__btn-label">Full Screen</span>
+    </button>
+    <a href="https://github.com/kenhuangus/agent-commerce-investment-stack" class="bar__cta" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<main class="deck">
+
+  <!-- 1 · Cover -->
+  <section class="slide is-active slide--dark" data-title="Cover">
+    <div class="slide__in center">
+      <div class="eyebrow">Keynote · Seven-Layer Framework</div>
+      <h1 class="hero__title">The Agent Commerce<br>Investment Stack</h1>
+      <p class="hero__sub">Where <strong>value, risk, and opportunity</strong> concentrate as autonomous agents begin to transact on behalf of consumers.</p>
+      <div class="hero__meta">Presented by <strong>Ken Huang, CISSP</strong><br/>Adjunct Professor, University of San Francisco · CEO, DistributedApps.ai</div>
+      <div class="stack-legend" style="justify-content:center;margin-top:1.6vh">
+        <span class="base">01 Model</span>
+        <span class="mid">02 Data</span>
+        <span class="mid">03 Protocol</span>
+        <span class="mid">04 Identity &amp; Hosting</span>
+        <span class="mid">05 Evaluation</span>
+        <span class="cross">06 Security &amp; Compliance</span>
+        <span class="top">07 Ecosystem</span>
+      </div>
+      <div class="hero__actions">
+        <a href="#2" class="bar__cta">Start ➔</a>
+      </div>
+      <p class="disclaimer">For educational and informational purposes only. Does not constitute investment, legal, or financial advice.</p>
+    </div>
+  </section>
+
+  <!-- 2 · About -->
+  <section class="slide" data-title="About the Speaker">
+    <div class="slide__in">
+      <div class="kicker">Authority &amp; academic grounding</div>
+      <h2 class="h2">Ken Huang, CISSP</h2>
+      <div class="speaker-row">
+        <img src="assets/images/ken-head-shot.png" alt="Ken Huang">
+        <div class="speaker-row__meta">
+          <strong>AI safety researcher, author, and CEO of DistributedApps.ai</strong>
+          Adjunct Professor, University of San Francisco
+        </div>
+      </div>
+      <div class="about">
+        <ul class="about__list">
+          <li><span class="ico">01</span><span>Fellow and Co-Chair of two Cloud Security Alliance (CSA) AI Safety Working Groups</span></li>
+          <li><span class="ico">02</span><span>OWASP AI Vulnerability Scoring System (AIVSS) Project Lead; core member, OWASP Top 10 for Large Language Model Applications</span></li>
+          <li><span class="ico">03</span><span>Member of the AIUC-1 Consortium; grant review member for Schmidt Sciences</span></li>
+          <li><span class="ico">04</span><span>EC-Council instructor for Generative AI for Cyber Security</span></li>
+          <li><span class="ico">05</span><span>Author and speaker on AI security, MAESTRO, and Harness Engineering</span></li>
+        </ul>
+        <div class="about__books-card">
+          <div class="about__books-header">
+            <span>Selected books</span>
+            <a href="https://www.amazon.com/stores/author/B0D3J7L7GN" target="_blank" rel="noopener">Amazon ➔</a>
+          </div>
+          <div class="about__books-grid">
+            <a class="about__book-item" href="https://www.amazon.com/dp/3031900251" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/springer_agentic_ai.jpg" alt="Agentic AI">
+              <span class="about__book-title">Agentic AI</span>
+              <span class="about__book-tag">Springer</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/3031448839" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/springer_beyond_ai.jpg" alt="Beyond AI">
+              <span class="about__book-title">Beyond AI</span>
+              <span class="about__book-tag">Springer</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/3031542517" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/springer_generative_ai_security.jpg" alt="GenAI Security">
+              <span class="about__book-title">GenAI Security</span>
+              <span class="about__book-tag">Springer</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/3031901002" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/springer_securing_ai_agents.jpg" alt="Securing AI Agents">
+              <span class="about__book-title">Securing Agents</span>
+              <span class="about__book-tag">Springer</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/1009384467" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/cambridge_web3.jpg" alt="Web3">
+              <span class="about__book-title">Web3</span>
+              <span class="about__book-tag">Cambridge</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/1394186524" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/wiley_blockchain_web3.jpg" alt="Blockchain Web3">
+              <span class="about__book-title">Blockchain</span>
+              <span class="about__book-tag">Wiley</span>
+            </a>
+            <a class="about__book-item" href="https://www.amazon.com/dp/B0HF3F86YM" target="_blank" rel="noopener">
+              <img class="about__book-cover" src="assets/images/books/harness_engineering.jpg" alt="Harness Engineering">
+              <span class="about__book-title">Harness Eng.</span>
+              <span class="about__book-tag">Packt</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="source">distributedapps.ai · kenhuangus.substack.com · linkedin.com/in/kenhuang8</p>
+    </div>
+  </section>
+
+  <!-- 3 · Stack at a glance -->
+  <section class="slide slide--alt" data-title="The Stack at a Glance">
+    <div class="slide__in">
+      <div class="kicker">Framework</div>
+      <h2 class="h2">The Stack at a Glance</h2>
+      <p class="lead">Seven layers connect agent capability to commercial access and accountability.</p>
+      <div class="cols cols--figure-left">
+        <div class="pane--figure">
+          <div class="fig" data-fig="stack"></div>
+        </div>
+        <div class="pane">
+          <div class="card card--info">
+            <h3 class="card__title">How to read the stack</h3>
+            <ul class="bullets">
+              <li><strong>Foundation (01–02):</strong> models and commerce data that agents act on.</li>
+              <li><strong>Mid-stack (03–05):</strong> protocols, identity and hosting, and evaluation.</li>
+              <li><strong>Cross-cutting (06):</strong> security and compliance across every layer.</li>
+              <li><strong>Top of stack (07):</strong> legal, governance, and enterprise access deals.</li>
+            </ul>
+          </div>
+          <div class="callout callout--info"><span>◆</span><span>Investment thesis: durable value can concentrate above the commoditizing model layer.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Layer 01 Model -->
+  <section class="slide" data-title="Layer 01 · Model">
+    <div class="slide__in">
+      <div class="kicker">Layer 01 · Model</div>
+      <h2 class="h2">Models are commoditizing</h2>
+      <p class="lead">Back the companies that gain when models get cheaper and interchangeable.</p>
+      <div class="grid grid--3">
+        <div class="card card--good layer-card">
+          <h3 class="card__title">01 · Cheaper</h3>
+          <ul class="bullets">
+            <li>Falling inference prices raise margins for agent apps and merchants running millions of shopping tasks.</li>
+            <li>Pure model resellers lose pricing power.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> high-volume agent apps, efficient inference serving</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Tuned</h3>
+          <ul class="bullets">
+            <li>Open-weight models fine-tuned on catalogs and checkout flows handle narrow shopping tasks at lower cost.</li>
+            <li>Deploy on-premises or on device.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> fine-tuning, distillation, on-device model vendors</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Routed</h3>
+          <ul class="bullets">
+            <li>No single model wins every task.</li>
+            <li>Routers send hard reasoning to frontier models and simple lookups to small ones.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> model routers, AI gateways, inference orchestration</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Cheaper · Tuned · Routed</span></div>
+    </div>
+  </section>
+
+  <!-- 5 · Layer 02 Data -->
+  <section class="slide slide--alt" data-title="Layer 02 · Data">
+    <div class="slide__in">
+      <div class="kicker">Layer 02 · Data</div>
+      <h2 class="h2">Agents shop only as well as their data</h2>
+      <p class="lead">Whoever holds clean, permitted commerce data decides who wins.</p>
+      <div class="grid grid--3">
+        <div class="card card--good layer-card">
+          <h3 class="card__title">01 · Clean</h3>
+          <ul class="bullets">
+            <li>Agents compare products on structured attributes, live inventory, and accurate prices.</li>
+            <li>Clean feeds get picked; messy listings get skipped.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> product data enrichment, feed management, catalog APIs</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Consented</h3>
+          <ul class="bullets">
+            <li>Sizes, preferences, addresses, and payment choices a shopper grants to any agent.</li>
+            <li>Consent flags the agent must honor.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> consent management, preference vaults, customer identity</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Controlled</h3>
+          <ul class="bullets">
+            <li>Amazon, Walmart, and Target guard ranking, fulfillment, and seller data.</li>
+            <li>Expect paid, governed agent access through licensed APIs.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> data clean rooms, licensed agent APIs, retail media data</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Clean · Consented · Controlled</span></div>
+    </div>
+  </section>
+
+  <!-- 6 · Layer 03 Protocol -->
+  <section class="slide" data-title="Layer 03 · Protocol">
+    <div class="slide__in">
+      <div class="kicker">Layer 03 · Protocol</div>
+      <h2 class="h2">Protocol standards are still in play</h2>
+      <p class="lead">Back what works across Universal Commerce Protocol (UCP), Agentic Commerce Protocol (ACP), Agent-to-Agent (A2A), and Model Context Protocol (MCP)—not one winner.</p>
+      <div class="grid grid--3">
+        <div class="card card--good layer-card">
+          <h3 class="card__title">01 · Rails</h3>
+          <ul class="bullets">
+            <li>Every agent purchase moves money through cards, stablecoins, or escrow.</li>
+            <li>Rails that add agent authorization, spend limits, and disputes earn per transaction.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent payment networks, tokenized cards, programmable escrow</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Bridges</h3>
+          <ul class="bullets">
+            <li>Merchants cannot rebuild checkout for each protocol.</li>
+            <li>Gateways that translate between UCP, ACP, A2A, and MCP earn from all of them.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> protocol gateways, merchant agent SDKs, commerce middleware</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Skills</h3>
+          <ul class="bullets">
+            <li>Agents find merchants and services through MCP servers and skills.</li>
+            <li>Curated, verified skill directories decide which tools agents call first.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> MCP server hosting, skill marketplaces, orchestration</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Rails · Bridges · Skills</span></div>
+    </div>
+  </section>
+
+  <!-- 7 · Layer 04 Identity -->
+  <section class="slide slide--alt" data-title="Layer 04 · Identity &amp; Hosting">
+    <div class="slide__in">
+      <div class="kicker">Layer 04 · Identity &amp; Hosting</div>
+      <h2 class="h2">Verify who the agent is and where it runs</h2>
+      <p class="lead">Agents cannot transact at scale until a counterparty can verify identity and trust the runtime.</p>
+      <div class="grid grid--3">
+        <div class="card card--good layer-card">
+          <h3 class="card__title">01 · Verify</h3>
+          <ul class="bullets">
+            <li>Every transaction needs proof of which agent is acting and for whom.</li>
+            <li>Agent Name Service (ANS) registries, verifiable credentials, and agent OAuth turn that check into recurring revenue.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> ANS registries, credential issuers, agent authorization</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Score</h3>
+          <ul class="bullets">
+            <li>Completion rates, dispute history, and fraud flags let merchants set terms.</li>
+            <li>A credit score for agents.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent reputation, fraud scoring, trust registries</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Isolate</h3>
+          <ul class="bullets">
+            <li>Enterprises need each shopping agent isolated, metered per agent-hour, and logged for audit.</li>
+            <li>Managed agent runtimes sell those guarantees.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent runtimes, sandboxes, confidential compute</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Verify · Score · Isolate</span></div>
+    </div>
+  </section>
+
+  <!-- 8 · Layer 05 Evaluation -->
+  <section class="slide" data-title="Layer 05 · Evaluation">
+    <div class="slide__in">
+      <div class="kicker">Layer 05 · Evaluation</div>
+      <h2 class="h2">Non-determinism makes measurement a product</h2>
+      <p class="lead">Agents give different results on each run, so builders pay for evaluation before scaling.</p>
+      <div class="grid grid--3">
+        <div class="card card--good layer-card">
+          <h3 class="card__title">01 · Test</h3>
+          <ul class="bullets">
+            <li>Generic benchmarks miss wrong sizes, stale prices, and bad addresses.</li>
+            <li>Suites built from merchant transaction traces show whether an agent can buy safely.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> commerce eval platforms, golden-dataset providers</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Repeat</h3>
+          <ul class="bullets">
+            <li>Each model or prompt change can break checkouts that passed last week.</li>
+            <li>Continuous regression turns evaluation into a subscription.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> continuous integration for agents, simulation environments, synthetic shoppers</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Certify</h3>
+          <ul class="bullets">
+            <li>Merchants need an outside party to confirm task, safety, and cost thresholds.</li>
+            <li>Certification unlocks merchant access.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> AIUC-1-style certification, insurance-linked audits</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Test · Repeat · Certify</span></div>
+    </div>
+  </section>
+
+  <!-- 9 · Layer 06 Security -->
+  <section class="slide slide--alt" data-title="Layer 06 · Security &amp; Compliance">
+    <div class="slide__in">
+      <div class="kicker">Layer 06 · Security &amp; Compliance</div>
+      <h2 class="h2">Guards, proof, and insurance unblock adoption</h2>
+      <p class="lead">Prompt injection, agent fraud, and missing audit trails block adoption; tools that remove them get paid.</p>
+      <div class="grid grid--3">
+        <div class="card card--risk layer-card">
+          <h3 class="card__title">01 · Guard</h3>
+          <ul class="bullets">
+            <li>Product listings, reviews, and emails can carry hidden instructions.</li>
+            <li>Guards that filter inputs and limit tool use protect every purchase.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent firewalls, tool-use policy engines, threat modeling</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Prove</h3>
+          <ul class="bullets">
+            <li>Signed action logs answer Payment Card Industry (PCI), Payment Services Directive 2 (PSD2), General Data Protection Regulation (GDPR), and EU Artificial Intelligence Act questions.</li>
+            <li>Regulators and card networks need to know who approved each purchase.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent audit logging, compliance automation</p>
+        </div>
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">03 · Insure</h3>
+          <ul class="bullets">
+            <li>When no human is in the loop, losses need an owner.</li>
+            <li>Risk scoring such as OWASP AI Vulnerability Scoring System (AIVSS) lets insurers price agent errors and fraud.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent liability insurance, risk scoring, fraud detection</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Guard · Prove · Insure</span></div>
+    </div>
+  </section>
+
+  <!-- 10 · Layer 07 Ecosystem -->
+  <section class="slide" data-title="Layer 07 · Ecosystem">
+    <div class="slide__in">
+      <div class="kicker">Layer 07 · Ecosystem</div>
+      <h2 class="h2">Access and liability set the terms</h2>
+      <p class="lead">Technology is ahead of law and commerce; whoever settles access and liability first sets the rules.</p>
+      <div class="grid grid--3">
+        <div class="card card--warn layer-card">
+          <h3 class="card__title">01 · Access</h3>
+          <ul class="bullets">
+            <li>Amazon blocking Meta’s Muse agent shows platforms can shut agents out.</li>
+            <li>Agent platforms with signed access, data, and revenue-share deals keep an edge.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> agent platforms with merchant agreements, business-to-business agent networks</p>
+        </div>
+        <div class="card card--info layer-card">
+          <h3 class="card__title">02 · Liability</h3>
+          <ul class="bullets">
+            <li>Shoppers and merchants hold back while it is unclear who pays for a wrong purchase.</li>
+            <li>Contract templates, dispute services, and case law set the rules.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> dispute resolution, agent terms of service, legal tech</p>
+        </div>
+        <div class="card card--good layer-card">
+          <h3 class="card__title">03 · Standards</h3>
+          <ul class="bullets">
+            <li>Rules at the Linux Foundation (Agent Name Service), OWASP, World Wide Web Consortium (W3C), and International Organization for Standardization (ISO) set interoperability and compliance costs.</li>
+            <li>Those who help write them build for them early.</li>
+          </ul>
+          <p class="look"><strong>Look for:</strong> standards work, conformance testing, policy advisory</p>
+        </div>
+      </div>
+      <div class="remember"><span class="remember__tag">Remember</span><span>Access · Liability · Standards</span></div>
+    </div>
+  </section>
+
+  <!-- 11 · Takeaways -->
+  <section class="slide slide--dark" data-title="Key Takeaways">
+    <div class="slide__in">
+      <div class="kicker">Closing</div>
+      <h2 class="h2">Key Takeaways</h2>
+      <p class="lead">Implications for builders, investors, and policymakers.</p>
+      <div class="cols">
+        <div class="pane">
+          <div class="takeaway-grid">
+            <div class="card">
+              <div class="card__num">01</div>
+              <h3 class="card__title">Value migrates upward</h3>
+              <ul class="bullets"><li>Model capability commoditizes. Durable value can concentrate in data, identity, evaluation, and ecosystem positioning.</li></ul>
+            </div>
+            <div class="card">
+              <div class="card__num">02</div>
+              <h3 class="card__title">Data is the choke point</h3>
+              <ul class="bullets"><li>Portal-specific and consumer data form a moat. Whoever controls access can shape the agent economy.</li></ul>
+            </div>
+            <div class="card">
+              <div class="card__num">03</div>
+              <h3 class="card__title">Protocols are the battleground</h3>
+              <ul class="bullets"><li>Universal Commerce Protocol (UCP), Agentic Commerce Protocol (ACP), Agent-to-Agent (A2A), and Model Context Protocol (MCP) will influence interoperability and lock-in.</li></ul>
+            </div>
+            <div class="card">
+              <div class="card__num">04</div>
+              <h3 class="card__title">Non-determinism demands evaluations</h3>
+              <ul class="bullets"><li>Agent commerce needs business-grounded benchmarks and continuous regression testing to scale.</li></ul>
+            </div>
+            <div class="card">
+              <div class="card__num">05</div>
+              <h3 class="card__title">Security is cross-cutting</h3>
+              <ul class="bullets"><li>Prompt injection, agent fraud, and liability gaps remain adoption barriers across the stack.</li></ul>
+            </div>
+            <div class="card">
+              <div class="card__num">06</div>
+              <h3 class="card__title">Ecosystem sets the ceiling</h3>
+              <ul class="bullets"><li>Technical readiness is ahead of legal and commercial readiness. Amazon and Muse preview access disputes ahead.</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="pane--figure">
+          <div class="fig" data-fig="value-flow"></div>
+        </div>
+      </div>
+      <p class="disclaimer" style="margin-top:0.8vh">For educational and informational purposes only. Does not constitute investment, legal, or financial advice.</p>
+    </div>
+  </section>
+
+</main>
+
+<nav class="ctrl">
+  <button class="ctrl__btn" id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+  <div class="dots" id="dots"></div>
+  <span class="ctrl__count" id="count">1 / 11</span>
+  <button class="ctrl__btn ctrl__btn--accent" id="nextBtn" aria-label="Next slide">Next ›</button>
+</nav>
+<div class="progress" id="progress"></div>
+
+<script src="assets/rough.min.js"></script>
+<script src="assets/sketch.js"></script>
+<script src="assets/figures.js"></script>
+<script src="assets/deck.js"></script>
+</body>
+</html>
